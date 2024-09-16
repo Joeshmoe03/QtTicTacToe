@@ -44,8 +44,8 @@ MainWindow::MainWindow(QWidget *parent)
     gridLayout->addWidget(button21, 2, 1);
     gridLayout->addWidget(button22, 2, 2);
 
-    // Use lambda function for specifying some weird behavior for changing button text and updating game turn
-    // NOTE: is there better widget/approach for doing this?
+    // Use lambda function for specifying some behavior for changing button text and updating game turn + check win condition
+    // NOTE: is there better widget/approach for doing this? https://stackoverflow.com/questions/19719397/qt-slots-and-c11-lambda
     connect(button00, &QPushButton::clicked, this, [this]() {tileClicked(button00, 0, 0); });
     connect(button01, &QPushButton::clicked, this, [this]() {tileClicked(button01, 0, 1); });
     connect(button02, &QPushButton::clicked, this, [this]() {tileClicked(button02, 0, 2); });
